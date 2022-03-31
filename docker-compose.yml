@@ -1,0 +1,35 @@
+version: "3"
+
+services:
+  web:
+    image: ngser/project_name:latest
+    container_name: project_name
+    build: .
+    depends_on:
+      - database
+      - redis
+    ports:
+      - "9000:3000"
+    volumes:
+      - .:/home/ngser/app
+    env_file:
+      - .env
+    environment:
+      - DB_USERNAME=$POSTGRES_USER
+      - DB_PASSWORD=$POSTGRES_PASSWORD
+  database:
+    image: postgres:13.2-alpine
+    restart: always
+    ports:
+      - "8000:5432"
+    volumes:
+      #chemin de la base de donnée en local à maper
+      - "${DB_DATA_LOCAL_PROJECT}:/var/lib/postgresql/data"
+    environment:
+      # Setting postgresql credentials
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+      - POSTGRES_DB=rails_db_name
+  redis:
+    image: redis:6.2.1-alpine
+    restart: always
