@@ -11,13 +11,17 @@ Actions to perform to make it work
    
 5. update the .env file by setting DB_USERNAME, DB_PASSWORD, DB_DATA_LOCAL_PROJECT etc ...
 6. uncomment "COPY package.json yarn.lock ./" in the Gemfile 
-7. perform : docker-compose build or docker-compose build --no-cache #to avoid conflit
-8. perform : docker-compose run web bundle
-9. create the DataBase App : => docker-compose run web rails db:create
-10. Migrate the DB : => docker-compose run web rails db:migrate
-11. Run the container : => docker-compose up
-12. Run the container in the detached mode : => docker-compose up -d
+7. specified DB_DATA_LOCAL_PROJECT of your database route to .env file
+8. uncomment the working route DB_DATA_LOCAL_PROJECT  to docker-compose.yml
+9. perform : docker-compose build or docker-compose build --no-cache #to avoid conflit
+10. perform : docker-compose run web bundle
+11. create the DataBase App : => docker-compose run web rails db:create
+12. Migrate the DB : => docker-compose run web rails db:migrate
+13. Run the container : => docker-compose up
+14. Run the container in the detached mode : => docker-compose up -d
 
+RESOLVED PROBLEMS
+- update  gem 'spring' by  gem 'spring', '~> 3.1.1' to the Gemfile to make rails working well in container
 
 
 USEFULL COMMAND
