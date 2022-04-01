@@ -27,9 +27,9 @@ services:
   #    - "${DB_DATA_LOCAL_PROJECT}:/var/lib/postgresql/data"  also uncomment it
     environment:
       # Setting postgresql credentials
-      - POSTGRES_USER
-      - POSTGRES_PASSWORD
-      - POSTGRES_DB=rails_db_name
+      - POSTGRES_USER  #it creates automatically in the database
+      - POSTGRES_PASSWORD #it creates automaticaaly in the database
+      - POSTGRES_DB=rails_db_name #it creates automatically in the database
   redis:
     image: redis:6.2.1-alpine
     restart: always
