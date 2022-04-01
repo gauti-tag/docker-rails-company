@@ -10,3 +10,10 @@ Actions to perform to make it work
    password: <%= ENV["DB_PASSWORD"] %>  #specidied in the docker-compose.yml mapped 
    
 5. update the .env file by setting DB_USERNAME, DB_PASSWORD, DB_DATA_LOCAL_PROJECT etc ...
+6. uncomment "COPY package.json yarn.lock ./" in the Gemfile 
+7. perform : docker-compose build
+8. perform : docker-compose run web bundle
+9. create the DataBase App : => docker-compose run web rails db:create
+10. Migrate the DB : => docker-compose run web rails db:migrate
+11. Run the container : => docker-compose up
+12. Run the container in the detached mode : => docker-compose up -d
