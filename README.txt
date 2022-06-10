@@ -30,3 +30,5 @@ USEFULL COMMAND
 - to remove all containers with the exit mention
 => docker rm $(docker ps -aq)
 
+docker network prune => remove or delete network unuse
+
