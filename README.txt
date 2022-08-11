@@ -29,6 +29,8 @@ USEFULL COMMAND
 => docker-compose down -v --remove-orphans
 - to remove all containers with the exit mention
 => docker rm $(docker ps -aq)
+=> Kill all containers : docker kill $(docker ps -q)
+
 
 docker network prune => remove or delete network unuse
 
