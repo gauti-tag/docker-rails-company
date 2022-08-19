@@ -22,9 +22,9 @@ services:
     restart: always
     ports:
       - "8000:5432"
-  #  volumes:  uncomment it when you specified the route in the .env file it's to database persistance
+  #  volumes:  #uncomment it when you specified the route in the .env file it's to database persistance
       #chemin de la base de donnée en local à maper
-  #    - "${DB_DATA_LOCAL_PROJECT}:/var/lib/postgresql/data"  also uncomment it
+  #    - "${DB_DATA_LOCAL_PROJECT}:/var/lib/postgresql/data"  #also uncomment it
     environment:
       # Setting postgresql credentials
       - POSTGRES_USER  #it creates automatically in the database
