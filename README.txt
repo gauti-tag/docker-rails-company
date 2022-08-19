@@ -23,6 +23,8 @@ Actions to perform to make it work
 RESOLVED PROBLEMS
 - update  gem 'spring' by  gem 'spring', '~> 3.1.1' to the Gemfile to make rails working well in container
 
+COMMAND TO USED
+CMD ["rails", "server", "-p", "3000", "-b", "0.0.0.0"] : to run the server 
 
 USEFULL COMMAND
 - to down all containers
