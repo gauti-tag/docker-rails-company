@@ -37,3 +37,9 @@ USEFULL COMMAND
 
 docker network prune => remove or delete network unuse
 
+CHANGER LA VERSION DE RAILS A INSTALLER
+==> docker-compose run web gem list rails --local
+==> docker-compose run web gem install rails -v '5.2.3' -V --no-document
+==> docker-compose run web rails _5.2.3_ new appname
+
+
