@@ -9,6 +9,7 @@ PS: Attribuer les permission aux fichiers avant toutes actions
    port: 5432
    username: <%= ENV["DB_USERNAME"] %>  #specified in the docker-compose.yml mapped 
    password: <%= ENV["DB_PASSWORD"] %>  #specidied in the docker-compose.yml mapped 
+   database: <%= ENV["DB_NAME"] %> # specified for each environnement to config/database.yml 
    
 5. update the .env file by setting DB_USERNAME, DB_PASSWORD, DB_DATA_LOCAL_PROJECT etc ...
 6. uncomment "COPY package.json yarn.lock ./" in the Gemfile 
