@@ -43,4 +43,8 @@ CHANGER LA VERSION DE RAILS A INSTALLER
 ==> docker-compose run web gem install rails -v '5.2.3' -V --no-document
 ==> docker-compose run web rails _5.2.3_ new appname
 
+#### UPGRADE TO RECENT VERSION
+- ruby:3.0-alpine
+- version de bundler 2.3.7
+- gem 'rails', '~>7.0'
 
