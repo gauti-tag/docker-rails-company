@@ -2,8 +2,8 @@ Actions to perform to make it work
 PS: Attribuer les permission aux fichiers avant toutes actions
 1. rename the 'project_name' in docker-compose.yml file in web service and for container_name
 2. type the command: "docker-compose build --no-cache"  #for the first time to avoid conflit
-3. to create new rails project run: "docker-compose run web rails new . --database=postgresql" and follow the instructions
-   to create new API rails project run: "docker-compose run web rails new . --api --database=postgresql" and follow the instructions
+3. to create new rails project run: "docker-compose run web rails _version_ new . --database=postgresql" and follow the instructions
+   to create new API rails project run: "docker-compose run web rails _version_ new . --api --database=postgresql" and follow the instructions
 4. set theses params at the defaut part to config/database.yml :
    host: database #name of db service specified in the docker-compose.yml file
    port: 5432
