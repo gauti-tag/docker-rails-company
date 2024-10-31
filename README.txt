@@ -48,3 +48,9 @@ CHANGER LA VERSION DE RAILS A INSTALLER
 - version de bundler 2.3.7
 - gem 'rails', '~>7.0'
 
+##### Check Network Connectivity
+- On Linux, add this to your /etc/docker/daemon.json:
+  {
+  "dns": ["8.8.8.8", "8.8.4.4"]
+  }
+- Restart Docker after making these changes : sudo systemctl restart docker
