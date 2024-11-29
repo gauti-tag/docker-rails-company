@@ -54,3 +54,6 @@ CHANGER LA VERSION DE RAILS A INSTALLER
   "dns": ["8.8.8.8", "8.8.4.4"]
   }
 - Restart Docker after making these changes : sudo systemctl restart docker
+
+## Docker error: LegacyKeyValueFormat: "ENV key=value" should be used instead of legacy "ENV key value" format (line 18)
+Fix: ENV BUNDLER_VERSION=2.0.2  became => ENV BUNDLER_VERSION 2.0.2 
